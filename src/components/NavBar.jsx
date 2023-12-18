@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/ayoub-baslam-high-resolution-logo-transparent.png";
-import { FaBars,FaTimes, FaGithub,FaFacebook,FaYoutube} from "react-icons/fa";
+import { FaBars,FaTimes, FaGithub,FaLinkedin} from "react-icons/fa";
 
 const NavBar = () => {
   const [navB, setNav] = useState(true);
