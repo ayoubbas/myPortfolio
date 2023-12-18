@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/ayoub-baslam-high-resolution-logo-transparent.png";
-import { FaBars,FaTimes, FaGithub,FaLinkedin} from "react-icons/fa";
+import { FaBars,FaTimes, FaGithub,FaLinkedin, FaWhatsapp} from "react-icons/fa";
+import { HiOutlineMail} from "react-icons/hi";
 
 const NavBar = () => {
   const [navB, setNav] = useState(true);
@@ -62,7 +63,17 @@ const NavBar = () => {
             </nav>
           )}
           <div onClick={handleClick} className="Burger">
-            {navB ? <FaBars className="icon" /> : <FaTimes className="icon" />}
+            {navB ? <FaBars className="icon"  /> : <FaTimes className="icon" />}
+          </div>
+
+          <div className="socialMedia">
+            <ul>
+              <li className="icon" > <a style={{backgroundColor:"#2b3137"}} href="/"><span>Github</span> <FaGithub size={30} /></a></li>
+              <li className="icon" > <a style={{backgroundColor:"#0072b1"}} href="/"><span>Linkedin </span><FaLinkedin size={30} /></a></li>
+              <li className="icon"> <a style={{backgroundColor:"#6fc2b0"}} href="/"><span>Mail</span> <HiOutlineMail size={30} /></a></li>
+              <li className="icon"> <a style={{backgroundColor:"#28D146"}} href="/"><span>WhatsApp</span> <FaWhatsapp size={30} /></a></li>
+            </ul>
+            
           </div>
         </div>
       </div>

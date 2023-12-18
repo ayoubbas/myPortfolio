@@ -3,6 +3,7 @@
   margin: 0;
   list-style: none;
   font-family: "Open Sans", sans-serif;
+  text-decoration: none;
 }
 .container {
   width: 90%;
@@ -91,3 +92,46 @@
   z-index: 1;
   font-size: x-large;
 }
+
+/* icoooooooon  social media*/
+
+.socialMedia {
+  height: 100vh;
+  /* background-color: aqua; */
+  position: fixed;
+  top: 35%;
+  left: 0;
+}
+.socialMedia .icon {
+  display: flex;
+  margin-left: -100px;
+  transition: all .5s;
+  font-weight: bold;
+}
+.socialMedia .icon:hover {
+  margin-left: 0;
+}
+
+.socialMedia a {
+  color: #EDEDED;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 130px;
+  padding: 5px;
+
+
+}
+.socialMedia span {
+  margin: 10px;
+
+}
+.hidden{
+  display: none;
+}
+/* hooooome */
+.home {
+  height: 100vh;
+  background-color: #171717;
+}
+
