@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar {
+  width: 100%;
+  height: 80px;
+  background-color: #171717;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.menu li a {
+  text-decoration: none;
+  color: #ededed;
+  position: relative;
+}
+.menu li a:hover {
+  transition: all 0.6s;
+  color: #da0037;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu li a:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #da0037;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transition: all 0.5s;
+}
+.menu li a:hover:after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Burger {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .Nav {
+    display: block;
   }
+}
+@media only screen and (max-width: 768px) {
+  .Nav {
+    display: none;
+  }
+  .Burger {
+    display: block;
+  }
+}
+.phoneNav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #da0037;
+}
+
+.phoneNav .menu {
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.Burger:nth-child() {
+    background-color: #da00;
+}
+
+.Burger .icon {
+  position:relative;
+  color: #EDEDED;
+  cursor: pointer;
+  z-index: 1;
+  font-size: x-large;
 }
