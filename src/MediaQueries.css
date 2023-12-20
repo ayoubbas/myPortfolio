@@ -23,4 +23,23 @@
     .home h2{
       font-size: 40px !important;
     }
+    .about .section  {
+      flex-direction: column;
+    }
+    .about .title {
+      justify-content: start;
+    }
+    .about h2 {
+      text-align: start;
+    }
+    .about .section div {
+      width: 100%;
+    }
+    
+  }
+
+  @media (max-width:600px) {
+    .skills .gridSkills {
+      grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
+    }
   }
