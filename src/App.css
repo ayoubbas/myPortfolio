@@ -55,14 +55,23 @@
   left: 0;
   top: 0;
   background-color: #da0037;
+  z-index: 9999;
 }
-
+.fatimes {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ededed;
+}
 .phoneNav .menu {
   flex-direction: column;
   text-align: center;
   font-size: 1.5rem;
 }
-
+.Fatimes{
+  position: relative;
+  z-index: 99999;
+}
 .Burger:nth-child() {
   background-color: #da00;
 }
@@ -107,6 +116,24 @@
 }
 .hidden {
   display: none;
+}
+.parantPhoneMenu {
+  display: flex;
+  flex-direction: column;
+}
+.socialMediaPhone ul {
+  display: flex;
+  margin-top: 30px;
+  gap: 10px;
+  
+}
+.socialMediaPhone ul li a{
+  color: #ededed;
+  background: none !important;
+  transition: all .5s;
+}
+.socialMediaPhone ul li a:hover{
+  color: #171717;
 }
 /* hooooome */
 .home {
@@ -162,15 +189,16 @@
 /* abouuuuuuuuuuut */
 
 .about {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   background-color: #171717;
   color: #ededed;
   padding: 0 0 100px;
-  /* margin: 100px 0; */
 }
-
+.about .title{
+  margin: 0 0 50px;
+}
 .about .section {
   display: flex;
   justify-content: space-between;
@@ -185,11 +213,7 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-/* .title {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-} */
+
 .title h1::after {
   content: "";
   position: absolute;
@@ -231,16 +255,122 @@
   text-align: center;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-content: center;
   gap: 50px;
   color: #ededed;
   padding: 80px 0;
 }
 
-
 /* woooooooooooooooork */
 
 .work {
   background-color: #171717;
+}
+.work .title{
+  margin-bottom: 50px   ;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(250px,auto);
+  gap: 20px;
+}
+.project1 {
+  background-image: url(./assets/projects/workImg.jpeg);
+}
+.project2 {
+  background-image: url(./assets/projects/realestate.jpg);
+}
+.project3 {
+  background-image: url(./assets/projects/workImg.jpeg);
+}
+.project4 {
+  background-image: url(./assets/projects/realestate.jpg);
+}
+.project5 {
+  background-image: url(./assets/projects/workImg.jpeg);
+}
+.project6 {
+  background-image: url(./assets/projects/realestate.jpg);
+}
+.project7 {
+  background-image: url(./assets/projects/workImg.jpeg);
+}
+.projects article{
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  
+}
+.projects article .hiddenEffect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(-153deg, #ffffff6c 0%, #da003783 50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all .5s;
+  border-radius: 10px;
+}
+.projects article:hover .hiddenEffect{
+  transform: rotate(0deg);
+}
+.projects article .hiddenEffect span {
+  color: white;
+  font-weight: bold;
+}
+.projects article button {
+  background-color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  color: #171717;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.projects article button:hover {
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 60px -20px inset,
+    rgba(0, 0, 0, 0.6) 0px 18px 36px -30px inset;
+}
 
+
+/* contact */
+
+.contact {
+  background-color: #171717;
+  padding: 100px 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 30px auto;
+
+}
+.contact form input , .contact textarea {
+  border: none;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #cac9c9;
+  
+}
+.contact .submitBtn {
+  background:none;
+  color: #ededed;
+  border: 2px solid #ededed;
+  padding: 10px 15px ;
+  transition: all .5s;
+  font-weight: 800;
+  border-radius: 10px;
+}
+.contact .submitBtn:hover {
+  background-color:#da0037;
 }

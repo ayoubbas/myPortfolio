@@ -26,16 +26,18 @@
     .about .section  {
       flex-direction: column;
     }
-    .about .title {
+    /* .about .title {
       justify-content: start;
-    }
-    .about h2 {
-      text-align: start;
+    } */
+    .about h2 ,.about p{
+      text-align: center;
     }
     .about .section div {
       width: 100%;
     }
-    
+    .projects article .hiddenEffect{
+      transform: rotate(0deg);
+    }
   }
 
   @media (max-width:600px) {
